@@ -7,8 +7,9 @@ export class HeroService {
 
     constructor() { }
 
-    getHeroes(): Promise<any> {
-        return Promise.resolve(HEROES);
+    getHero(id: number): Promise<any> {
+        return this.getHeroes()
+            .then(heroes => heroes.find(hero => hero.id === id));
     }
 
 }
