@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+    <h2>
+        {{hero.name}}的详细介绍
+    </h2>
+    <div>
+        <label>序号：</label>{{hero.id}}
+    </div>
+    <div>
+        <label>名字：</label>
+        <input type="text" [(ngModel)]="hero.name">
+    </div>
+</div>
